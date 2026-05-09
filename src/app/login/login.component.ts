@@ -22,6 +22,7 @@ export class LoginComponent {
       this.router.navigate(['welcome', this.username]); // Navigate to the welcome page on successful login
     } else {
       this.invalidLogin = true;
+      this.password = '';
     }
   }
 }
