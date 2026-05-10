@@ -6,13 +6,19 @@ import { Injectable } from '@angular/core';
 export class HardcodedAuthenticationService {
   constructor() {}
 
-  // This method checks if the provided username and password match the hardcoded credentials.
-  // If they do, it returns true, indicating a successful authentication; otherwise, it returns false.
+  // Authenticate user
   authenticate(username: string, password: string): boolean {
     if (username === 'nkdey14' && password === 'test@123') {
+      sessionStorage.setItem('authenticatedUser', username);
       return true;
     }
 
     return false;
+  }
+
+  // Check if user is logged in
+  isUserLoggedIn(): boolean {
+    let user = sessionStorage.getItem('authenticatedUser');
+    return user !== null;
   }
 }

@@ -33,6 +33,7 @@
     "@angular/compiler-cli": "^16.2.0",
     "@cypress/schematic": "^2.5.2",
     "@types/jasmine": "~4.3.0",
+    "angular-cli-ghpages": "^2.0.3",
     "angular-eslint": "21.0.1",
     "cypress": "latest",
     "eslint": "^9.39.1",
